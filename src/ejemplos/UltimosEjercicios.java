@@ -24,13 +24,7 @@ public class UltimosEjercicios {
         //ejercicioDieciseis();
         //ejercicioDiecisiete();
         //ejercicioDieciocho();
-        //holaMundo();
-        pruebaRepositorio();
     }
-public static void pruebaRepositorio(){
-    int a=0;
-    System.out.println("a es "+a);
-}
 public static void ejercicioTres(){
     //variables
     int num1=12;
@@ -268,9 +262,6 @@ public static void ejercicioDieciocho(){
     nota = key.nextFloat();
     //salida
     System.out.println(nota>-1 && nota<11?(5.0f<=nota?"aprobado":"suspenso"):"erronea");
-}
-public static void holaMundo(){
-    System.out.println("hola mundo");
 }
 
 }
