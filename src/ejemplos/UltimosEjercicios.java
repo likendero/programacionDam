@@ -23,7 +23,8 @@ public class UltimosEjercicios {
         //ejercicioQuince();
         //ejercicioDieciseis();
         //ejercicioDiecisiete();
-        ejercicioDieciocho();
+        //ejercicioDieciocho();
+        holaMundo();
     }
 public static void ejercicioTres(){
     //variables
@@ -262,6 +263,9 @@ public static void ejercicioDieciocho(){
     nota = key.nextFloat();
     //salida
     System.out.println(nota>-1 && nota<11?(5.0f<=nota?"aprobado":"suspenso"):"erronea");
+}
+public static void holaMundo(){
+    System.out.println("hola mundo");
 }
 
 }
