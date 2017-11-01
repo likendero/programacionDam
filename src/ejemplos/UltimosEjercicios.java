@@ -24,8 +24,13 @@ public class UltimosEjercicios {
         //ejercicioDieciseis();
         //ejercicioDiecisiete();
         //ejercicioDieciocho();
-        holaMundo();
+        //holaMundo();
+        pruebaRepositorio();
     }
+public static void pruebaRepositorio(){
+    int a=0;
+    System.out.println("a es "+a);
+}
 public static void ejercicioTres(){
     //variables
     int num1=12;
