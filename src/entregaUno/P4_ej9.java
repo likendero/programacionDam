@@ -16,6 +16,7 @@ public class P4_ej9 {
             precio=key.nextDouble();
             //salida
             System.out.println("el precio con iva es "+ (precio+precio*iva) );
+            key.close();
         }
     }
 }
