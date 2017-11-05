@@ -1,5 +1,5 @@
 
-package entregaUno;
+package practicaCuatro;
     import java.util.Scanner;
 /**
  *
