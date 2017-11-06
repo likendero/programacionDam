@@ -23,10 +23,10 @@ public class SwitchPrueba {
         //salida
         switch(caracter){
             case 'a': case 'A':
-            case 'e':
-            case 'i':
-            case 'o':
-            case 'u':
+            case 'e': case 'E':
+            case 'i': case 'I':
+            case 'o': case 'O':
+            case 'u': case 'U':
                 System.out.println("es vocal");
                 break;
             default:
@@ -70,10 +70,12 @@ public class SwitchPrueba {
     }    
     public static void ejemploTres(Scanner key){
         //variable
-        int mes;
+        int mes,agno;
         //entrada
         System.out.println("introduce el mes numericamente");
         mes=key.nextInt();
+        System.out.println("intoduce el año");
+        agno=key.nextInt();
         //salida
         switch(mes){
             case 1:
@@ -92,7 +94,8 @@ public class SwitchPrueba {
                 System.out.println("30 dias");
                 break;
             case 2:
-                System.out.println("28 o 29 dias");
+                System.out.println(agno%400==0 || agno%4==0 && agno%100!=0?""
+                        + "29 dias":"28 dias");
                 break;
             default:
                 System.out.println("numero incorrecto de mes");
