@@ -87,13 +87,23 @@ public class ejerciciosClaseBucles {
         cont=2;
         esPrimo=true;
         //cuerpo
+        /*
+        bucle que pide y verifica la cota superior e inferior
+        el inferiror debe ser mayor de dos y menor que el superior, miesntras que 
+        estas condiciones no se cumplan el programa no continuara
+        */
         while(primoInf>=primoSup || primoInf<2){
             System.out.println("introduce la cota inferior(mayor que 2)");
             primoInf=ent.nextInt();
             System.out.println("Introduce la cota superior(mayor que la inferior)");
             primoSup=ent.nextInt();
         }
+        //inicio bucle while, este continuara hasta que se recorra todos los numeros
+        // de inf hasta sup incluyendolos
+        System.out.println("inicio while");
         while(primoInf<=primoSup){
+            //este bucle comprueba si un numero es primo, si no lo fuese el bucle
+            //acaba al instante
             while(cont<primoInf){
                 if(primoInf%cont==0){
                     esPrimo=false;
@@ -101,11 +111,61 @@ public class ejerciciosClaseBucles {
                 }
                 cont++;
             }
+            //cada vez que el bucle superior acaba completo es que el nuemero es primo
+            //si esto es asi imprime que es primo en caso contrario esPrimo=false 
+            //y e imprime que no lo es
             if(esPrimo)System.out.println(primoInf+"es primo");
             cont=2;
             primoInf++;
             esPrimo=true;
         }
+        System.out.println("fin while");
+        //bis
+        while(primoInf>=primoSup || primoInf<2){
+            System.out.println("introduce la cota inferior(mayor que 2)");
+            primoInf=ent.nextInt();
+            System.out.println("Introduce la cota superior(mayor que la inferior)");
+            primoSup=ent.nextInt();
+        }
+        //lo mismo pero las comprobaciones van al final
+        System.out.println("inicio do while");
+        do{
+            //calculo de primos
+            while(cont<primoInf){
+                if(primoInf%cont==0){
+                    esPrimo=false;
+                    cont=primoInf;
+                }
+                cont++;
+            }
+            //salida si son primos
+            if(esPrimo)System.out.println(primoInf+"es primo");
+            cont=2;
+            primoInf++;
+            esPrimo=true;
+        }while(primoInf<=primoSup);
+        System.out.println("fin do while");
+        //introduccion de datos anti error
+        while(primoInf>=primoSup || primoInf<2){
+            System.out.println("introduce la cota inferior(mayor que 2)");
+            primoInf=ent.nextInt();
+            System.out.println("Introduce la cota superior(mayor que la inferior)");
+            primoSup=ent.nextInt();
+        }
+        System.out.println("inicio for");
+        for(int i=2;primoInf<=primoSup;primoInf++){
+            while(i<primoInf){
+                if(primoInf%cont==0){
+                    esPrimo=false;
+                    i=primoInf;
+                }
+                i++;
+            }
+            if(esPrimo)System.out.println(primoInf+"es primo");
+            i=2;
+            esPrimo=true;
+        }
+        System.out.println("fin for");
     }
   }
     
