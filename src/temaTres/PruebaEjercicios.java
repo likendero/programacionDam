@@ -13,6 +13,14 @@ import java.math.BigInteger;
  */
 public class PruebaEjercicios {
     public static void main(String[] args) {
+        Hora hora=new Hora(23,43,59);
+        hora.sumarSegundo();
+        System.out.println(hora.mostrarHora());
+        hora.segundoAnterior();
+        System.out.println(hora.mostrarHora());
+        System.out.println(hora.validarHora()?"la hora es correcta":"la hora es "
+                + "incorrecta");
+        /*
         long n=10l;
         int factorial=1;
         int suma=0;
@@ -25,7 +33,7 @@ public class PruebaEjercicios {
             suma+=factorial;
         }
         System.out.println(suma);
-        
+        */
         
     }
 }
