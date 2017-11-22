@@ -52,6 +52,7 @@ public class Fraccion {
         if(this.getDenominador()==fraccion2.getDenominador()){
             this.setNumerador(fraccion2.getNumerador()+this.getNumerador());
         }
+        this.simplificar();
     }
     /**
      * metodo que resta a la instancia otra Fraccion
@@ -61,6 +62,7 @@ public class Fraccion {
         if(this.getDenominador()==fraccion2.getDenominador()){
             this.setNumerador(fraccion2.getNumerador()-this.getNumerador());
         }
+        this.simplificar();
     }
     /**
      * metodo que multiplica la instancia por otra fraccion
@@ -69,6 +71,7 @@ public class Fraccion {
     public void multiplicacion (Fraccion fraccion2){
         this.setNumerador(fraccion2.getNumerador()*this.getNumerador());
         this.setDenominador(fraccion2.getDenominador()*this.getDenominador());
+        this.simplificar();
     }
     /**
      * divide la Fraccion instanciada entre otra Fraccion, si el numerador es 0
@@ -81,6 +84,7 @@ public class Fraccion {
         this.setNumerador(fraccion2.getDenominador()*this.getNumerador());
         this.setDenominador(fraccion2.getNumerador()*this.getDenominador());
         }
+        this.simplificar();
     }
     /**
      * metodo que simplifica la Fraccion si es posible
