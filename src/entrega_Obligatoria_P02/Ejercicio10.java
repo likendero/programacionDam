@@ -5,6 +5,7 @@ package entrega_Obligatoria_P02;
  *
  * @author likendero
  */
+//entrega realizada con exito
 public class Ejercicio10 {
     public static void main(String[] args) {
         Scanner key=new Scanner(System.in);
