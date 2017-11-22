@@ -71,11 +71,29 @@ public class Fraccion {
         this.setDenominador(fraccion2.getDenominador()*this.getDenominador());
     }
     /**
-     * 
-     * @param fraccion2 
+     * divide la Fraccion instanciada entre otra Fraccion, si el numerador es 0
+     * es equivalente a 0, por eso la Fraccion divisora no puede tener el numerador==0
+     * @param fraccion2 fraccion por la que se va a dividir
      */
     public void division (Fraccion fraccion2){
+        //no se puede dividir entre 0
+        if(fraccion2.getNumerador()!=0){
         this.setNumerador(fraccion2.getDenominador()*this.getNumerador());
         this.setDenominador(fraccion2.getNumerador()*this.getDenominador());
+        }
+    }
+    /**
+     * metodo que simplifica la Fraccion si es posible
+     */
+    public void simplificar(){
+        // bucle que recorre los numeros posibles para simplimficar
+        for(int i=10; i>1;i--){
+            //en el caso de ser divisible por numerador y denominador simplifica
+            while(this.getDenominador()%i==0 && this.getNumerador()%i==0 
+                    && this.getDenominador()/i>0) {
+                this.setDenominador(this.getDenominador()/i);
+                this.setNumerador(this.getNumerador()/i);
+            }
+        }
     }
 }
